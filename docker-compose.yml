@@ -3,7 +3,7 @@ services:
 
 
  mongo:
-   image: MRomeral/p2gps:db
+   image: romeral94/p2gps:db
    deploy:
      replicas: 1
      #resources:
@@ -18,7 +18,7 @@ services:
    volumes:
     - "db-data:/data/db"
  order:
-   image: MRomeral/p2gps:order
+   image: romeral94/p2gps:order
    depends_on:
      - "mongo"
    deploy:
