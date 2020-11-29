@@ -32,7 +32,7 @@ services:
    ports:
     - "8080:8080"
  web:
-   image: MRomeral/p2gps:web
+   image: romeral94/p2gps:web
    deploy:
      replicas: 1
      #resources:
