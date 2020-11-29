@@ -3,7 +3,7 @@ services:
 
 
  mongo:
-   image: juanancarrillo/p2gps:db
+   image: MRomeral/p2gps:db
    deploy:
      replicas: 1
      #resources:
@@ -18,7 +18,7 @@ services:
    volumes:
     - "db-data:/data/db"
  order:
-   image: juanancarrillo/p2gps:order
+   image: MRomeral/p2gps:order
    depends_on:
      - "mongo"
    deploy:
@@ -32,7 +32,7 @@ services:
    ports:
     - "8080:8080"
  web:
-   image: juanancarrillo/p2gps:web
+   image: MRomeral/p2gps:web
    deploy:
      replicas: 1
      #resources:
